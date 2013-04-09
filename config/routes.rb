@@ -5,7 +5,7 @@ Share::Application.routes.draw do
 
   devise_for :rocketeers
 
-  #root :to => "home#index" #root can be anything, but must be present for devise gem.  
+  root :to => "rocketeers#index" #root can be anything, but must be present for devise gem.  
   
 
 
