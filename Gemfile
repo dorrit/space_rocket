@@ -8,7 +8,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-identity'
 gem 'foreman'
 gem 'jquery-rails'
-
+gem 'devise'
 
 group :development do
   gem 'quiet_assets'

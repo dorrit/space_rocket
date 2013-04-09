@@ -1,4 +1,7 @@
 require File.expand_path('../boot', __FILE__)
+#  config.assets.initialize_on_precompile = false
+#   ^^^^ Optional setting for devise; prevents DB access when precompiling assets (Heroku)
+
 
 # Pick the frameworks you want:
 require "active_record/railtie"
