@@ -24,6 +24,8 @@ end
 group :test do
 	gem 'shoulda-matchers'
 	gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
 end
 
 group :assets do

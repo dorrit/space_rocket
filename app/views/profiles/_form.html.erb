@@ -1,0 +1,14 @@
+<%= flash[:notice] %>
+<%= flash[:alert] %>
+
+<h1>New profile</h1>
+
+<%= form_for @profile do |f| %>
+  <%= f.label :bio%>
+  <%= f.text_field :bio %>
+  <%= f.label :hobby %>
+  <%= f.text_field :hobby %>
+  <%= f.label :work %>
+  <%= f.text_field :work %>
+  <%= f.submit %>
+<% end %>
