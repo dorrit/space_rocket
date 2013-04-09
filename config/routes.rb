@@ -3,15 +3,13 @@ Share::Application.routes.draw do
   resources :profiles
   resources :contact_details
 
-  devise_for :rocketeers 
+  # devise_for :rocketeers, :controllers => { :sessions => "sessions" }
+
+  devise_for :rocketeers, :controllers => { :registrations => "registrations" }
 
   resources :rocketeers, :only => [:index, :show]
 
-
-
   root :to => "rocketeers#index" #root can be anything, but must be present for devise gem.  
-  
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -20,4 +20,7 @@ describe ContactDetail do
     it {should_not allow_value('lfskfj').for :email}
   end
 
+  context 'association' do
+    it {should belong_to :rocketeer}
+  end
 end

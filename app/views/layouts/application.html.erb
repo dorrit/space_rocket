@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Share</title>
-  <!-- For devise. -->
+  <title>Space Rocket | <%= yield :title %></title>
+    <!-- For devise. -->
   <!--p class="notice"><%= notice %></p><-->
   <!--p class="alert"><%= alert %></p><-->
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -10,8 +11,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <%= render 'layouts/header' %>
+  <div class="container">
+    
+    <br><br>
+    <h3><%= yield :title %></h3>
+    <%= yield %>
+  </div>
 
 </body>
 </html>

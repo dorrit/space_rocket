@@ -1,0 +1,31 @@
+<div class="container"> 
+   <div class="row-fluid">
+    <div class="span6" style="padding:4px"><h4><%= link_to 'Space Rocket', root_path%></h4><h5>Jet-Propelled Community Building</h5></div>
+    <!--fixme: bad inline styling-->
+    <div class="span6" style="padding:10px;text-align:right">
+      <% if flash[:notice] %>
+        <div class="alert alert-info"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-error"><%= flash[:alert] %></div>
+      <% end %>
+      <% if current_rocketeer %>
+        Logged in as <b><%= current_rocketeer.first_name %></b>.
+
+        <div class="btn-group">
+          <div class="dropdown">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "View Profile", rocketeer_path(current_rocketeer.id), method: "get", :class => 'btn' %></li>
+              <li><%= link_to "Edit Account", edit_rocketeer_path(current_rocketeer.id), method: "get", :class => 'btn' %></li>
+              <li><%= link_to "Log Out", logout_path, method: "delete", :class => 'btn' %></li>
+            </ul>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "Sign Up", '/rocketeers/sign_up', :class => 'btn btn-primary' %> or
+        <%= link_to "Log In", '/rocketeers/sign_in', :class => 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
