@@ -1,5 +1,16 @@
 require 'spec_helper'
 
 describe Rocketeer do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'associations' do
+    it {should have_one :contact_detail}
+    it {should have_one :profile}
+  end
+
+
+  context '#full_name' do
+    it 'returns the full name of the rocketeer' do
+      rocketeer = FactoryGirl.create(:rocketeer)
+      rocketeer.full_name.should eq "Sammy McTougherson"
+    end
+  end
 end
