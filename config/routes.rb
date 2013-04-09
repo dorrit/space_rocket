@@ -2,8 +2,9 @@ Share::Application.routes.draw do
 
   devise_for :rocketeers
 
-  #!! root :to => "home#index" #root can be anything, but must be present for devise gem.  
+  #root :to => "home#index" #root can be anything, but must be present for devise gem.  
   
+  resources :profiles
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
