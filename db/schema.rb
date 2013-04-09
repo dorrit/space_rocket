@@ -28,13 +28,12 @@ ActiveRecord::Schema.define(:version => 20130409190757) do
     t.text     "bio"
     t.text     "hobby"
     t.string   "work"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "rocketeer_id"
   end
 
   create_table "rocketeers", :force => true do |t|
-    t.string   "first_name",             :default => "", :null => false
-    t.string   "last_name",              :default => "", :null => false
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
