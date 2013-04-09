@@ -8,4 +8,8 @@ describe Profile do
     it {should allow_mass_assignment_of :work}
 
   end
+
+  context 'associations' do
+    it {should belong_to :rocketeer}
+  end
 end
