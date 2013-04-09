@@ -1,0 +1,21 @@
+<%= flash[:notice] %>
+<%= flash[:alert] %>
+
+<h1>Contact Details</h1>
+
+<%= form_for @contact_detail do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name%>
+  <%= f.text_field :last_name %>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :apartment_number%>
+  <%= f.text_field :apartment_number %>
+  <%= f.submit %>
+<% end %>
+
+
+end
