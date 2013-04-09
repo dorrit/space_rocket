@@ -7,7 +7,7 @@ class Rocketeer < ActiveRecord::Base
 
 
   def full_name
-    "#{self.try(:contact_detail).try(:first_name)}  #{self.try(:contact_detail).try(:last_name)}"
+    "#{self.try(:contact_detail).try(:first_name)} #{self.try(:contact_detail).try(:last_name)}"
   end
 
 end
