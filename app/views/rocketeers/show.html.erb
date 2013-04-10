@@ -1,6 +1,10 @@
-<% provide :title, "Captain #{@rocketeer.try(:full_name)}" %>
+<% provide :title, "Welcome Captain #{@rocketeer}" %>
 
-<i><%= "Email: #{@rocketeer.try(:email)}" %></i><br>
+<i><%= "Email: #{@rocketeer.email}" %></i><br>
+<i><%= "Name: #{@rocketeer.full_name}" %></i><br>
+<i><%= "Phone: #{@rocketeer.contact_detail.phone}" %></i><br>
+<i><%= "Apt#: #{@rocketeer.contact_detail.apartment_number}" %></i><br>
+
 
 
 <p><%= link_to 'Home', root_url, :class => 'btn btn-primary' %></p>

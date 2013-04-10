@@ -2,6 +2,7 @@ require 'spec_helper'
 
 feature "new contact_details" do
   scenario "with valid info" do
+    # sign_in FactoryGirl.create :rocketeer_with_contact_detail
     visit new_contact_detail_path
     fill_in 'First name', :with => 'I am an astronaut'
     fill_in "Last name", :with => 'Soccer, spulunking'

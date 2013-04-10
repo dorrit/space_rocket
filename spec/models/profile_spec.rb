@@ -6,6 +6,7 @@ describe Profile do
     it {should allow_mass_assignment_of :bio}
     it {should allow_mass_assignment_of :hobby}
     it {should allow_mass_assignment_of :work}
+    it {should allow_mass_assignment_of :rocketeer_id}
 
   end
 

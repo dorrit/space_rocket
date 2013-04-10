@@ -9,7 +9,7 @@ describe Rocketeer do
 
   context '#full_name' do
     it 'returns the full name of the rocketeer' do
-      rocketeer = FactoryGirl.create(:rocketeer)
+      rocketeer = FactoryGirl.create(:rocketeer_with_contact_detail)
       rocketeer.full_name.should eq "Sammy McTougherson"
     end
   end

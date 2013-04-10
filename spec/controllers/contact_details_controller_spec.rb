@@ -18,12 +18,13 @@ describe ContactDetailsController do
   end
 
   context 'POST create' do
-    let(:valid_attributes) {{first_name: 'hi', last_name: 'soccer', phone: 'some job', email: 'some@job.com', apartment_number: '24'}}
+    let(:rocketeer) {FactoryGirl.create :rocketeer}
+    let(:valid_attributes) {{first_name: 'Beyla', last_name: 'Weiss', phone: '510-495-5432', email: 'beyla@weiss.com', apartment_number: '24'}}
     let(:valid_parameters) {{contact_detail: valid_attributes}}
 
-
+    before {sign_in rocketeer}
     before {post :create, valid_parameters}
 
-    it {should redirect_to new_contact_detail_path} #change this
+    it {should redirect_to '/dashboard'}
   end
 end

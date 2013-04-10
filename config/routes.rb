@@ -7,9 +7,11 @@ Share::Application.routes.draw do
 
   devise_for :rocketeers, :controllers => { :registrations => "registrations" }
 
-  resources :rocketeers, :only => [:index, :show]
+  resources :rocketeers, :only => [:index]
 
   root :to => "rocketeers#index" #root can be anything, but must be present for devise gem.  
+
+   match 'dashboard' => 'rocketeers#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

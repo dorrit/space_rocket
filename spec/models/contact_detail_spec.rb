@@ -8,6 +8,8 @@ describe ContactDetail do
     it {should allow_mass_assignment_of :phone}
     it {should allow_mass_assignment_of :email}
     it {should allow_mass_assignment_of :apartment_number}
+    it {should allow_mass_assignment_of :rocketeer_id}
+
   end
 
   context 'validation' do
@@ -16,6 +18,7 @@ describe ContactDetail do
     it {should validate_presence_of :phone}
     it {should validate_presence_of :email}
     it {should validate_presence_of :apartment_number}
+    it {should validate_presence_of :rocketeer_id}
     it {should allow_value('mfpiccolo@gmail.com').for :email}
     it {should_not allow_value('lfskfj').for :email}
   end
