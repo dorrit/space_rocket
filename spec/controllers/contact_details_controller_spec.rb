@@ -24,6 +24,7 @@ describe ContactDetailsController do
 
     before {post :create, valid_parameters}
 
-    it {should redirect_to new_contact_detail_path} #change this
+    it {should redirect_to '/rocketeers/:id'}
   end
+
 end

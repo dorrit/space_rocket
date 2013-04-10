@@ -18,13 +18,13 @@
             <ul class="dropdown-menu">
               <li><%= link_to "View Profile", rocketeer_path(current_rocketeer.id), method: "get", :class => 'btn' %></li>
               <li><%= link_to "Edit Account", edit_rocketeer_path(current_rocketeer.id), method: "get", :class => 'btn' %></li>
-              <li><%= link_to "Log Out", logout_path, method: "delete", :class => 'btn' %></li>
             </ul>
           </div>
         </div>
       <% else %>
         <%= link_to "Sign Up", '/rocketeers/sign_up', :class => 'btn btn-primary' %> or
         <%= link_to "Log In", '/rocketeers/sign_in', :class => 'btn btn-primary' %>
+        <%= link_to "Log Out", '/rocketeers/sign_out', method: "delete", :class => 'btn' %>
       <% end %>
     </div>
   </div>

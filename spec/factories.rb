@@ -1,5 +1,6 @@
 FactoryGirl.define do 
   factory :rocketeer do
+    #id 1
     sequence(:email) {|n| "email@gmail#{n}.com"}
     password "gobbledygook1"  
     contact_detail
@@ -11,6 +12,7 @@ FactoryGirl.define do
     hobby "Hanging from helicopters with my bare teeth."
     work "Astronaut"
   end
+  
   factory :contact_detail do
     first_name 'Sammy'
     last_name 'McTougherson'

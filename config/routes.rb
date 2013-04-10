@@ -9,7 +9,9 @@ Share::Application.routes.draw do
 
   resources :rocketeers, :only => [:index, :show]
 
-  root :to => "rocketeers#index" #root can be anything, but must be present for devise gem.  
+  match 'home' => 'rocketeers#show'
+
+  root :to => "rocketeers#show" #root can be anything, but must be present for devise gem.  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

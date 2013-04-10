@@ -9,7 +9,7 @@ class ContactDetailsController < ApplicationController
 
     if @contact_detail.save
       flash[:notice] = "Your contact details were successfully added."
-      redirect_to new_contact_detail_path
+      redirect_to '/rocketeers/:id'
     else
       render :new
     end
