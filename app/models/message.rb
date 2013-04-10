@@ -1,10 +1,11 @@
 class Message < ActiveRecord::Base
-  validates :subject, :text, :public,  :presence => true
+  validates :subject, :text, :presence => true
   attr_accessible :subject, :text, :public
   belongs_to :rocketeer
-  before_save :default_values
+  after_initialize :default_values
+
   def default_values
-    self.status ||= 'P'
+    self.public = false
   end
 end
 

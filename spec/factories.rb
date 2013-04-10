@@ -27,4 +27,9 @@ FactoryGirl.define do
     apartment_number '15'
     rocketeer_id 45
   end
+
+  factory :message do
+    text 'lsdkjf'
+    subject 'sfslfjsl'
+  end
 end
