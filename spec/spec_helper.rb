@@ -13,7 +13,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 Capybara.javascript_driver = :poltergeist
 
 RSpec.configure do |config|
-   config.include Devise::TestHelpers, :type => :controller
+
+  config.include Devise::TestHelpers, type: :controller
+
 
   # ## Mock Framework
   #

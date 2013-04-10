@@ -8,7 +8,7 @@
   </tr>
   <% @rocketeers.each do |rocketeer| %>
     <tr>
-      <td><%= link_to rocketeer.try(:full_name), rocketeer_path(rocketeer.id), method: "get" %></td>
+      <td><%= link_to rocketeer.try(:full_name), rocketeers_path(rocketeer.id), method: "get" %></td>
       <td><%= rocketeer.email %></td>
       <td><%= rocketeer.created_at.localtime.strftime("%x") %></td>
     </tr>
