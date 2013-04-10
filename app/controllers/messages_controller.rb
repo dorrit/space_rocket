@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
   end
 
   def create
+    # binding.pry
     @message = current_rocketeer.messages.build(params[:message])
      if @message.save
       flash[:notice] = "Your contact details were successfully added."

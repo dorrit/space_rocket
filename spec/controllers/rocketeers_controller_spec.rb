@@ -15,7 +15,8 @@ describe RocketeersController do
 
   context 'GET show' do
     let(:rocketeer) {FactoryGirl.create :rocketeer} 
-    before {get :show, {}, :id => rocketeer.id}
+    before {sign_in rocketeer}
+    before {get :show, :id => rocketeer.id}
 
     it {should render_template :show}
   end
