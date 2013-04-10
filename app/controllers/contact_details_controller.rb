@@ -10,8 +10,9 @@ class ContactDetailsController < ApplicationController
 
     if @contact_detail.save
 
-      redirect_to '/dashboard'
+      redirect_to '/home'
       flash[:notice] = "Your contact details were successfully added."
+
     else
       render :new
     end

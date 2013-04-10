@@ -25,6 +25,8 @@ describe ContactDetailsController do
     before {sign_in rocketeer}
     before {post :create, valid_parameters}
 
-    it {should redirect_to '/dashboard'}
+    it {should redirect_to '/home'}
+
   end
+
 end

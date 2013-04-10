@@ -1,5 +1,6 @@
 FactoryGirl.define do 
   factory :rocketeer do
+    #id 1
     sequence(:email) {|n| "email@gmail#{n}.com"}
     password "gobbledygook1" 
     profile

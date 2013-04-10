@@ -1,0 +1,17 @@
+<%= flash[:notice] %>
+<%= flash[:alert] %>
+
+<h1>New message</h1>
+
+
+<%= form_for @message do |f| %>
+  <%= f.label :subject%>
+  <%= f.text_field :subject %>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <br>
+    Public
+    <%= f.check_box :public %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
