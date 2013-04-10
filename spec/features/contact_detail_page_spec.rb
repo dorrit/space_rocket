@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature "new contact_details" do
   scenario "with valid info" do
-    visit new_contact_detail_path
+    sign_up_helper
     fill_in 'First name', :with => 'I am an astronaut'
     fill_in "Last name", :with => 'Soccer, spulunking'
     fill_in "Phone", :with => 'Code'

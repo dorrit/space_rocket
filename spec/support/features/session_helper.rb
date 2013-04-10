@@ -1,4 +1,4 @@
-def sign_up
+def sign_up_helper
   visit root_path
   click_link 'Sign Up'
   fill_in 'Email', with: 'email@email.com'
@@ -7,7 +7,7 @@ def sign_up
   click_button 'Sign up'
 end
 
-def sign_in 
+def sign_in_helper
   sign_up_with('bob jones', 'email@email.com', 'secret1')
   visit root_path
   click_link "Log In"

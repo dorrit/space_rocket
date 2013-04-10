@@ -28,6 +28,7 @@ group :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'rb-fsevent'
+  gem 'poltergeist'
 end
 
 group :assets do
