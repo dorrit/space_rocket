@@ -16,4 +16,10 @@ describe Message do
   context 'associations' do
     it {should belong_to :rocketeer}
   end
+
+  context 'callbacks' do
+    it 'normalizes Message with public false value' do
+      FactoryGirl.create(:message).public.should be_false
+    end
+  end
 end
