@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
 
     if @profile.save
       flash[:notice] = "Your profile was successfully created."
-      redirect_to new_profile_path
+      redirect_to home_path
     else
       render :new
     end

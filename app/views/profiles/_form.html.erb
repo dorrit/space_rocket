@@ -1,7 +1,8 @@
 <%= flash[:notice] %>
 <%= flash[:alert] %>
 
-<h1>New profile</h1>
+
+<h3>Tell us something about yourself!</h3>
 
 <%= form_for @profile do |f| %>
   <%= f.label :bio%>
@@ -10,5 +11,8 @@
   <%= f.text_field :hobby %>
   <%= f.label :work %>
   <%= f.text_field :work %>
+   <br><br>
   <%= f.submit %>
+  <br><br>
+   <%= link_to "I'll fill this out later!", '/home', :class => 'btn btn-mini' %> 
 <% end %>
