@@ -9,7 +9,7 @@
   </tr>
   <% @rocketeers.each do |rocketeer| %>
     <tr>
-      <td><%= image_tag rocketeer.profile.avatar.url(:thumb  ) if rocketeer.profile %></td>
+      <td><%= image_tag rocketeer.profile.avatar.url(:thumb) if rocketeer.profile %></td>
       <td><%= link_to rocketeer.try(:full_name), rocketeers_path(rocketeer.id), method: "get" %></td>
       <td><%= rocketeer.email %></td>
       <td><%= rocketeer.created_at.localtime.strftime("%x") %></td>
