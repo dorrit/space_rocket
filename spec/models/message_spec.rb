@@ -4,7 +4,6 @@ describe Message do
   context 'validations' do
     it {should validate_presence_of :text}
     it {should validate_presence_of :subject}
-    it {should validate_presence_of :public}
   end
 
   context 'mass assignment' do
@@ -15,5 +14,11 @@ describe Message do
 
   context 'associations' do
     it {should belong_to :rocketeer}
+  end
+
+  context 'callbacks' do
+    it 'normalizes Message with public false value' do
+      FactoryGirl.create(:message).public.should be_false
+    end
   end
 end

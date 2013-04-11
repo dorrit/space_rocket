@@ -19,6 +19,7 @@
               <li><%= link_to "View Profile", home_path, method: "get", :class => 'btn' %></li>
               <li><%= link_to "Edit Account", edit_rocketeer_registration_path(current_rocketeer.id), method: "get", :class => 'btn' %></li>
               <li><%= link_to "Add Message", new_message_path, method: "get", :class => 'btn' %></li>
+              <li><%= link_to "Public Messages", messages_path, method: "get", :class => 'btn' %></li>
               <li><%= link_to "Log Out", '/rocketeers/sign_out', method: "delete", :class => 'btn' %></li>
             </ul>
           </div>

@@ -24,6 +24,6 @@ describe MessagesController do
     before {sign_in rocketeer}
     before {post :create, valid_parameters}
 
-    it {should redirect_to root_path} #change this
+    it {should redirect_to messages_path} #change this
   end
 end

@@ -1,0 +1,16 @@
+<% provide :title, "Public Messages" %>
+
+<table class="table">
+  <tr>
+    <td><b>Subject</b></td>
+    <td><b>Text</b></td>
+    <td><b>Created At</b></td>
+  </tr>
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.subject %></td>
+      <td><%= message.text %></td>
+      <td><%= message.created_at.localtime.strftime("%x") %></td>
+    </tr>
+  <% end %>
+</table>
