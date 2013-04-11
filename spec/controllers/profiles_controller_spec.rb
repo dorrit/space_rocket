@@ -20,9 +20,21 @@ describe ProfilesController do
   context 'POST create' do
     let(:valid_attributes) {{bio: 'hi', hobby: 'soccer', work: 'some job'}}
     let(:valid_parameters) {{contact: valid_attributes}}
-
+    let(:rocketeer) {FactoryGirl.create :rocketeer}
+    
+    before {sign_in rocketeer}
     before {post :create, valid_parameters}
 
     it {should redirect_to home_path} #change this
+  end
+
+  context 'GET show' do
+    let(:rocketeer) {FactoryGirl.create :rocketeer}
+    let(:profile) {FactoryGirl.create :profile} 
+
+    before {sign_in rocketeer}
+    before {get :show, :id => rocketeer.profile.id}
+
+    it {should render_template :show}
   end
 end

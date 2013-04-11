@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410162152) do
+ActiveRecord::Schema.define(:version => 20130411002752) do
 
   create_table "contact_details", :force => true do |t|
     t.string   "first_name"
@@ -37,9 +37,13 @@ ActiveRecord::Schema.define(:version => 20130410162152) do
     t.text     "bio"
     t.text     "hobby"
     t.string   "work"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "rocketeer_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "rocketeers", :force => true do |t|

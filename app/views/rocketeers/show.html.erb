@@ -1,5 +1,6 @@
 
 <% provide :title, "Welcome Captain #{@rocketeer.full_name}" %>
+<%= image_tag @rocketeer.profile.avatar(:thumb) %>
 <b><%= "Contact Info" %></b><br>
 <i><%= "Email: #{@rocketeer.email}" %></i><br>
 <i><%= "Name: #{@rocketeer.full_name}" %></i><br>

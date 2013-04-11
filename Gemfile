@@ -9,6 +9,7 @@ gem 'omniauth-identity'
 gem 'foreman'
 gem 'jquery-rails'
 gem 'devise'
+gem 'paperclip'
 
 group :development do
   gem 'quiet_assets'
