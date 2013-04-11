@@ -26,4 +26,16 @@ describe MessagesController do
 
     it {should redirect_to messages_path} #change this
   end
+
+  context 'DELETE destroy' do
+    it 'destroys a message' do
+      message = FactoryGirl.create :message
+      expect {delete :destroy, {:id => message.id}}.to change(Message, :count).by(-1)
+    end
+
+    let(:message) {FactoryGirl.create :message}
+    before {delete :destroy, {:id => message.id}}
+
+    it {should redirect_to messages_path}
+  end
 end

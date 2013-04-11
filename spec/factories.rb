@@ -3,6 +3,7 @@ FactoryGirl.define do
     #id 1
     sequence(:email) {|n| "email@gmail#{n}.com"}
     password "gobbledygook1" 
+    admin false
     profile
   end
 

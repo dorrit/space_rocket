@@ -13,4 +13,12 @@ describe Rocketeer do
       rocketeer.full_name.should eq "Sammy McTougherson"
     end
   end
+
+  context '#admin?' do
+    it 'returns true if current_rocketeer has admin status' do 
+      rocketeer = FactoryGirl.create(:rocketeer)
+      rocketeer.update_attribute :admin, true
+      rocketeer.admin?.should eq true
+    end
+  end
 end

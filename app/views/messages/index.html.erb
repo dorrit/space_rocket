@@ -11,6 +11,7 @@
       <td><%= message.subject %></td>
       <td><%= message.text %></td>
       <td><%= message.created_at.localtime.strftime("%x") %></td>
+      <td><%= link_to 'Blow Up!!', message, :confirm => 'Are you sure?', :method => :delete if current_rocketeer.try(:admin?) %></td>
     </tr>
   <% end %>
 </table>
