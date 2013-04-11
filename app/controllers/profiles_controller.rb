@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-      @profile = current_rocketeer.build_profile(params[:profile])
+    @profile = current_rocketeer.build_profile(params[:profile])
     if @profile.save
       flash[:notice] = "Your profile was successfully created."
       redirect_to home_path

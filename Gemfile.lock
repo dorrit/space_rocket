@@ -241,6 +241,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   factory_girl_rails
+  faraday
   foreman
   guard-rspec
   jquery-rails
