@@ -8,7 +8,7 @@ Share::Application.routes.draw do
 
   devise_for :rocketeers, :controllers => { :registrations => "registrations" }
 
-  resources :rocketeers, :only => [:index]
+  resources :rocketeers, :only => [:index, :show, :destroy]
 
   match 'home' => 'rocketeers#show'
 

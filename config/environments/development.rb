@@ -1,4 +1,6 @@
 Share::Application.configure do
+
+  config.paperclip_defaults = {:storage => :s3}
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

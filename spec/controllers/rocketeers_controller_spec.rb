@@ -22,4 +22,16 @@ describe RocketeersController do
     it {should render_template :show}
   end
 
+  context 'DELETE destroy' do
+    it 'destroys a rocketeer' do
+      rocketeer = FactoryGirl.create :rocketeer
+      expect {delete :destroy, {:id => rocketeer.id}}.to change(Rocketeer, :count).by(-1)
+    end
+
+    let(:rocketeer) {FactoryGirl.create :rocketeer}
+    before {delete :destroy, {:id => rocketeer.id}}
+
+    it {should redirect_to rocketeers_path}
+  end
+
 end

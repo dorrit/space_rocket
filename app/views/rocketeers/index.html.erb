@@ -13,6 +13,8 @@
       <td><%= link_to rocketeer.try(:full_name), rocketeers_path(rocketeer.id), method: "get" %></td>
       <td><%= rocketeer.email %></td>
       <td><%= rocketeer.created_at.localtime.strftime("%x") %></td>
+      <% if current_rocketeer.try(:admin?) %><td><%= link_to 'Blow Up!!', rocketeer, :confirm => 'Are you sure?', :method => :delete %> </td><% end %>
+
     </tr>
   <% end %>
 </table>

@@ -38,6 +38,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production, :development do 
+  gem 'aws-sdk'
+end
+
 
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
