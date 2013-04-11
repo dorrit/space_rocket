@@ -6,7 +6,7 @@ development:
 
 test:
   adapter: postgresql
-  database: space_rocket_development
+  database: space_rocket_test
   host: localhost
 
 

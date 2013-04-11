@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Rocketeer do
+
   context 'associations' do
     it {should have_one :contact_detail}
     it {should have_one :profile}
