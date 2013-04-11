@@ -23,6 +23,6 @@ describe ProfilesController do
 
     before {post :create, valid_parameters}
 
-    it {should redirect_to new_profile_path} #change this
+    it {should redirect_to home_path} #change this
   end
 end

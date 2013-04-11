@@ -10,7 +10,9 @@ class ContactDetailsController < ApplicationController
 
     if @contact_detail.save
 
-      redirect_to '/home'
+      redirect_to new_profile_path
+
+      # redirect_to '/home'
       flash[:notice] = "Your contact details were successfully added."
 
     else
