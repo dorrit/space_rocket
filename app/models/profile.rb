@@ -7,4 +7,5 @@ class Profile < ActiveRecord::Base
 
   validates_attachment_size :avatar, :less_than => 2.megabytes
   validates_attachment_content_type :avatar, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
+    #, :s3_credentials => {:access_key_id => AWS_ACCESS_KEY_ID,:secret_access_key => AWS_SECRET_ACCESS_KEY}, :bucket => AWS_BUCKET} 
 end
