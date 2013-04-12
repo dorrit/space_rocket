@@ -4,7 +4,8 @@ class Rocketeer < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :admin
   has_one :profile
   has_one :contact_detail
-  has_many :messages
+  has_many :received_messages, :class_name => "Message", :foreign_key => "recipient_id"
+  has_many :sent_messages, :class_name => "Message", :foreign_key => "sender_id"
 
 
   def full_name

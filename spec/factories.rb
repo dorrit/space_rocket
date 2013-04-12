@@ -32,5 +32,7 @@ FactoryGirl.define do
   factory :message do
     text 'lsdkjf'
     subject 'sfslfjsl'
+    association :recipient, :factory => :rocketeer
+    association :sender, :factory => :rocketeer
   end
 end

@@ -2,12 +2,16 @@
 
 <table class="table">
   <tr>
+    <td><b>From</b></td>
+    <td><b>To</b></td>
     <td><b>Subject</b></td>
     <td><b>Text</b></td>
-    <td><b>Created At</b></td>
+    <td><b>Sent</b></td>
   </tr>
   <% @messages.each do |message| %>
     <tr>
+      <td><%= message.sender.full_name %></td>
+      <td><%= message.recipient.full_name if message.recipient %></td>
       <td><%= message.subject %></td>
       <td><%= message.text %></td>
       <td><%= message.created_at.localtime.strftime("%x") %></td>

@@ -10,6 +10,7 @@ gem 'foreman'
 gem 'jquery-rails'
 gem 'devise'
 gem 'paperclip'
+gem 'faraday'
 
 group :development do
   gem 'quiet_assets'
@@ -30,6 +31,7 @@ group :test do
   gem 'guard-rspec'
   gem 'rb-fsevent'
   gem 'poltergeist'
+  #gem 'webmock'
 end
 
 group :assets do

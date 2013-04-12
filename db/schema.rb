@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(:version => 20130411171647) do
     t.string   "subject"
     t.string   "text"
     t.boolean  "public"
-    t.integer  "rocketeer_id"
+    t.integer  "sender_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "recipient_id"
   end
 
   create_table "profiles", :force => true do |t|

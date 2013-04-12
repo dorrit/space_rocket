@@ -19,7 +19,7 @@ describe MessagesController do
 
   context 'POST create' do
     let(:rocketeer) {FactoryGirl.create :rocketeer}    
-    let(:valid_attributes) {{subject: 'hi', text: 'soccer', public: true}}
+    let(:valid_attributes) {{subject: 'hi', text: 'soccer', recipient_id: rocketeer.id, sender_id: rocketeer.id, public: true}}
     let(:valid_parameters) {{message: valid_attributes}}
     before {sign_in rocketeer}
     before {post :create, valid_parameters}
